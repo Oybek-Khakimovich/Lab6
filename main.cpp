@@ -38,8 +38,26 @@ int main() {
         }*/
 
     //problem2.b
-    //int count=0; num=2;
-
+    /*int n, count=0, num=2;
+    cout<<"Nechta tub son chiqsin:"<<endl;
+    cin>>n;
+    while (count<n) {
+        int divisor= 2;
+        bool isPrime = true;
+        while (divisor*divisor <= n) {
+            if (num % divisor == 0) {
+                isPrime = false;
+                break;
+            }
+            divisor++;
+        }
+        if (isPrime) {
+            cout<<num<<" ";
+            count++;
+        }
+        num++;
+    }
+cout<<endl;*/
 
     //problem3
     /*int n;
@@ -53,8 +71,8 @@ int main() {
           }
 
           cout<<n<<" ";
-          }
-  */
+          }*/
+
     //problem4;
     /* int n,r=0;
      cin>>n;
@@ -67,6 +85,16 @@ int main() {
 
 
     //problem 5
+    /*int num, r;
+    cout<<"Enter a number"<<endl;
+    cin>>num;
+    while (num>0) {
+        r=num%10;
+        num/=10;
+
+        cout<<r<<" ";
+
+    }*/
 
 
     //problem6;
@@ -74,22 +102,52 @@ int main() {
     cout<<"Enter the numbers: ";
     cin>>num1>>num2;
 if (num1>num2) {
-    while (num1%num2==0) {
+    while (num1%num2!=0&&num2%num1!=0) {
         num1=num1%num2;
         num2=num2%num1;
+        if (num1==0) {
+            cout<<"The biggest divisible number is "<<num2;
+        }
+        if (num2==0) {
+            cout<<"The biggest divisible number is "<<num1;
+
+        }
     }
-    cout<<num1<<endl;
+
 }
 
     if (num2>num1) {
-        while (num2%num1==0) {
+        while (num2%num1!=0&&num1%num2!=0) {
             num2=num2%num1;
             num1=num1%num2;
+            if (num1==0) {
+                cout<<"The biggest divisible number is "<<num2;
+            }
+            if (num2==0) {
+                cout<<"The biggest divisible number is "<<num1;
+            }
         }
-        cout<<num2<<endl;
-    }
 
-*/
+    }
+if (num1>num2) {
+    cout<<"The biggest divisible number is "<<num2;
+}
+    if (num2>num1) {
+        cout<<"The biggest divisible number is "<<num1;
+    }*/
+
+    //problem7
+    /*int put, sum=0, num=0;
+    while (sum!=100) {
+        cout<<"Enter a number , and I add it"<<endl;
+        cin>>put;
+        sum+=put;
+        num++;
+        cout<<"Sum is "<<sum<<". Total numbers entered "<<num<<endl;
+    }
+    cout<<"Sum exceeded 100!. ";*/
+
+
 
     //problem 8
     /*int n=500, wamount;
@@ -112,16 +170,85 @@ if (num1>num2) {
     }*/
 
     //problem9
-    char letter;
+    /*char letter;
     do {
         cout << "Enter a uppercase letter: ";
         cin >> letter;
         if (letter == 'Y' || letter == 'N') {
             cout << "Valid answer\n";
 
-        } else cout << "Invalid answer, try again";
+        }
 
-    } while (letter == 'Y'||letter == 'N');
+    } while (letter !='Y'||letter != 'N');
+    cout<<"invalid input";*/
+
+    //PROBLEM10
+   /* int num;
+    do { cout<<"Please, choose one of them"<<endl;
+        cout<<"1. GO"<<endl;
+        cout<<"2, Run"<<endl;
+        cout<<"3. Exit"<<endl;
+        cin>>num;
+
+        if (num==1) {
+            cout<<"Processing...";
+        }
+        if (num==2) {
+            cout<<"Processing..."<<endl;
+        }
+
+
+    }
+    while (num!=3);
+    cout<<"Goodbye!"<<endl;*/
+
+    //problem11
+    /*int a, b, num;
+    cin >> a >> b;
+    do {
+        cout<<"Please choose one of them\n 1. Adding \n 2. Subtracting \n 3. Exit"<<endl;
+        cin >> num;
+        if (num==1) {
+            cout<<a+b<<endl;
+        }
+        if (num==2) {
+            cout<<a-b<<endl;
+        }
+    }
+    while (num!=3);
+    cout<<"Goodbye";*/
+
+    //problem12
+    /*int password=1234;
+    int password2, count=0;
+    do {
+        cout<<"Enter a password"<<endl;
+        cin>>password2;
+        if (password2==password) {
+            cout<<"Your password is correct"<<endl;
+        return 0;}
+        if (password2!=password) {
+            cout<<"Your password is not correct"<<endl;
+        }
+        count++;
+    }
+    while (count<3);
+    cout<<"Your limit is over";*/
+
+    //problem13
+    /*int num=10, guessnum;
+    do {
+        cout<<"Enter a number between 1 and 10: "<<endl;
+        cin>>guessnum;
+        if (num>guessnum) {
+            cout<<"Too low"<<endl;
+        }
+        if (num<guessnum) {
+            cout<<"Too high"<<endl;
+        }
+    }
+    while (num!=guessnum);
+            cout<<"You win!"<<endl;*/
 
     return 0;
 }
